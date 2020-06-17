@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <form action="traitement.php" method="POST">
+        <fieldset id="legIdentite">
+            <legend>Identité</legend>
+            <p>
+                <label for="prenom">Prénom : </label>
+                <input name="prenom" type="text" placeholder="Renseignez votre prénom" required/>
+            </p>
+            <p>
+                <label for="nom">Nom : </label>
+                <input name="nom" type="text" placeholder="Renseignez votre nom" required/>
+            </p>
+            <p>
+                <label for="dateNaissance">Date de naissance : </label>
+                <input name="dateNaissance" type="date" required/>
+            </p>
+            <p>
+                <label for="civilite">Civilité : </label>
+                <select name="civilite">
+                    <option>Monsieur</option>
+                    <option>Madame</option>
+                    <option>Mademoiselle</option>
+                </select>
+            </p>
+            <p><label for="adresse">Adresse : </label><input name="adresse" type="text" placeholder="Renseignez votre adresse"/></p>
+            <p><label for="codePostal">Code postal : </label><input name="codePostal" type="number" min="0" placeholder="Renseignez votre Code postal"/></p>
+            <p>
+                <label for="ville">Ville : </label>
+                <input name="ville" type="text" placeholder="Renseignez votre ville" list="villes"/>
+                <datalist id="villes">
+                    <option>Paris</option>
+                    <option>Nantes</option>
+                    <option>Lyon</option>
+                    <option>Vienne</option>
+                    <option>Valence</option>
+                </datalist>
+            </p>
+        </fieldset>
+
+        <fieldset id="legAuth">
+            <legend>Authentification</legend>
+            <p>
+                <label for="email">Email : </label>
+                <input name="email" type="email" placeholder="Renseignez votre Email" required/>
+            </p>
+            <p>
+                <label for="motdepasse">Mot de passe : </label>
+                <input name="motdepasse" type="password" placeholder="Au moins 6 caractères" required/>
+            </p>
+        </fieldset>
+
+        <fieldset id="legInteret">
+            <legend>Centre d'interêts</legend>
+            <p>
+                <label for="commentaires">Commentaires : </label>
+                <textarea name="commentaires" placeholder="Laissez un message..." rows="10" cols="50"></textarea>
+            </p>
+            <p>
+                <label for="interets">Interêts : </label>
+                <input name="interets" type="checkbox" value="chat"/> <label>Chat</label>
+                <input name="interets" type="checkbox" value="chaton"/> <label>Chaton</label>
+                <input name="interets" type="checkbox" value="felin"/> <label>Autres félins</label>
+                <input name="interets" type="checkbox" value="chien"/> <label>Chien</label>
+
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Envoyer"/>
+            <input type="reset" value="Remise à zéro"/>
+        </p>
+    </form> 
+</body>
+</html>

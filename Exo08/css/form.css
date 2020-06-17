@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+label[for] {
+    font-family: 'Metal Mania', cursive;
+    font-weight: bold;
+}
+
+#legIdentite legend {
+    color: indigo;
+}
+
+#legAuth legend {
+    color: blue;
+}
+
+#legInteret legend {
+    color: green;
+}
+
+input[type="email"] {
+    background-color: yellow;
+}
+
+option {
+    color: red;
+    background-color: yellow;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: blue;
+}

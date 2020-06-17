@@ -1,0 +1,36 @@
+h1, h2 {
+    color: blue;
+}
+
+cite {
+    color: darkslategray;
+}
+
+a {
+    color: black;
+}
+
+#firstParagraph {
+    color: white;
+    background-color: black;
+}
+
+p {
+    color: brown;
+}
+
+.fondOrange {
+    background-color: orange;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+.bleu {
+    color: blue;
+}
+
+table {
+    font-weight: bold;
+}
