@@ -1,0 +1,48 @@
+#rectangle {
+    width: 200px;
+    height: 150px;
+    border: 2px solid black;
+    background-color: red;
+    transition: width 1s, height 1s;
+    position: relative;
+}
+
+
+#carre {
+    width: 50px;
+    height: 50px;
+    background-color:black;
+    transition: width 1s, height 1s;
+    animation-name: promenade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+}
+
+#rectangle:hover {
+    width: 800px;
+    height: 600px;
+}
+
+#rectangle:hover #carre {
+    width: 150px;
+    height: 150px;
+    animation-name: grandePromenade;
+}
+
+@keyframes promenade {
+    0% {top: 0; left: 0;}
+    25% {top:0; left: 150px;}
+    50% {top:100px; left:150px;}
+    75% {top:100px; left: 0px;}
+    100% {top:0px; left: 0px;}
+}
+
+@keyframes grandePromenade {
+    0% {top: 0; left: 0;}
+    25% {top:0; left: 650px;}
+    50% {top:450px; left:650px;}
+    75% {top:450px; left: 0px;}
+    100% {top:0px; left: 0px;}
+}
