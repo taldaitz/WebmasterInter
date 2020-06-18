@@ -1,0 +1,36 @@
+nav {
+    border: 1px solid black;
+    background-color: beige;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .menu li {
+        display: block;
+        margin: 0;
+    }
+
+    p a {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    main p {
+        display: inline-block;
+        width: 40%;
+        margin: auto;
+    }
+}
+
+
+

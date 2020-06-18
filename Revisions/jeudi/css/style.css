@@ -1,0 +1,28 @@
+.carre {
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    background-color: cornflowerblue;
+}
+
+.inline {
+    display: inline-block;
+    background-color: darksalmon;
+}
+
+#flextest {
+    display: flex;
+    justify-content: space-around;
+}
+
+#carre3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#carre4 {
+    position: absolute;
+    top: 252px;
+    right: 0;
+}
