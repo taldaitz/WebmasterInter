@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+body {
+    margin: 0;
+}
+
+h1, h2 {
+    color: blue;
+}
+
+cite {
+    color: darkslategray;
+}
+
+a {
+    color: black;
+}
+
+#firstParagraph {
+    color: white;
+    background-color: black;
+}
+
+p {
+    color: brown;
+}
+
+.fondOrange {
+    background-color: orange;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+.bleu {
+    color: blue;
+}
+
+table {
+    font-weight: bold;
+}
+
+header {
+    border: 5px red solid;
+    text-align: center;
+}
+
+header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32pt;
+}
+
+nav {
+    background-color:  pink;
+    font-family: 'Sacramento', cursive;
+    font-size: 25pt;
+    position: fixed;
+    margin: 10px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav img {
+    float: right;
+    cursor: pointer;
+}
+
+footer {
+    background-color: grey;
+    border: 1px black solid;
+    text-align: center;
+    margin: 200px 0 0 0;
+}
+
+footer img:hover {
+    width: 200px;
+}
+
+.section:hover h2 {
+    color: red;
+} 
+
+main {
+    margin: 10px 10px 10px 250px;
+    position: relative;
+}
+
+#sectionDescr p {
+    display: inline-block;
+    width: 30%;
+    margin: 0 10px;
+}
+
+cite {
+    animation-name: citation;
+    animation-delay: 5s;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+@keyframes citation {
+    from {}
+    to {
+        position: fixed;
+        top: 500px;
+        left: 800px;
+        border: 2px solid green;
+        background-color: yellow;
+        color: violet;
+        font-size: 30pt;
+        z-index: 5;
+    }
+}
+
+.section img {
+    transition: width 2s;
+}
+
+.section img:hover {
+    width: 600px;
+}

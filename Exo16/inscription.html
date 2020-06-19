@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/form.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header class="container-fluid">
+        <div class="row justify-content-center">
+            <h1 class="text-uppercase">Les chats</h1>
+        </div>
+        <div class="row justify-content-center">
+            <cite class="text-info ">Felis silvestris catus</cite>
+        </div>
+    </header>
+
+    <nav class="container-fluid">
+        <div class="row justify-content-center">
+            <ul class="list-group list-group-horizontal-sm">
+                <li class="list-group-item">
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="inscription.html">Inscription</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://fr.wikipedia.org/wiki/Chat" target="_blank">En savoir plus</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <form action="traitement.php" method="POST" class="container-md">
+            <fieldset id="legIdentite">
+                <legend>Identité</legend>
+
+                <div class="form-row">
+
+                    <p class="form-group col-md-6">
+                        <label for="prenom">Prénom : </label>
+                        <input name="prenom" class="form-control" type="text" placeholder="Renseignez votre prénom"
+                            required />
+                    </p>
+
+                    <p class="form-group col-md-6">
+                        <label for="nom">Nom : </label>
+                        <input name="nom" class="form-control" type="text" placeholder="Renseignez votre nom"
+                            required />
+                    </p>
+
+                    <p class="form-group col-md-6">
+                        <label for="dateNaissance">Date de naissance : </label>
+                        <input name="dateNaissance" class="form-control" type="date" required />
+                    </p>
+
+                    <p class="form-group col-md-6">
+                        <label for="civilite">Civilité : </label>
+                        <select name="civilite" class="form-control">
+                            <option>Monsieur</option>
+                            <option>Madame</option>
+                            <option>Mademoiselle</option>
+                        </select>
+                    </p>
+
+                    <p class="form-group col-md-6">
+                        <label for="adresse">Adresse : </label>
+                        <input class="form-control" name="adresse" type="text" placeholder="Renseignez votre adresse" />
+                    </p>
+
+                    <p class="form-group col-md-6">
+                        <label for="codePostal">Code postal : </label>
+                        <input class="form-control" name="codePostal" type="number" min="0"
+                            placeholder="Renseignez votre Code postal" />
+                    </p>
+
+                    <p class="form-group col-md-6">
+                        <label for="ville">Ville : </label>
+                        <input name="ville" class="form-control" type="text" placeholder="Renseignez votre ville"
+                            list="villes" />
+                        <datalist id="villes">
+                            <option>Paris</option>
+                            <option>Nantes</option>
+                            <option>Lyon</option>
+                            <option>Vienne</option>
+                            <option>Valence</option>
+                        </datalist>
+                    </p>
+
+                </div>
+            </fieldset>
+
+            <fieldset id="legAuth" class="form-row">
+                <legend>Authentification</legend>
+                <div class="form-row">
+
+                    <p class="form-group col-md-6">
+                        <label for="email">Email : </label>
+                        <input name="email" class="form-control" type="email" placeholder="Renseignez votre Email"
+                            required />
+                    </p>
+
+                    <p class="form-group col-md-6">
+                        <label for="motdepasse">Mot de passe : </label>
+                        <input name="motdepasse" class="form-control" type="password"
+                            placeholder="Au moins 6 caractères" required />
+                    </p>
+
+                </div>
+            </fieldset>
+
+            <fieldset id="legInteret" class="form-row">
+                <legend>Centre d'interêts</legend>
+                <div class="form-row">
+
+                    <p class="form-group col-md-6">
+                        <label for="commentaires">Commentaires : </label>
+                        <textarea name="commentaires" class="form-control" placeholder="Laissez un message..." rows="10"
+                            cols="50"></textarea>
+                    </p>
+
+                    <div class="form-group col-md-6">
+                        <label>Interets :</label>
+                        <div class="form-check">
+                            <input id="ckChat" name="interets" class="form-check-input" type="checkbox" value="chat" />
+                            <label class="form-check-label" for="ckChat">Chat</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="ckChaton" name="interets" class="form-check-input" type="checkbox" value="chaton" />
+                            <label class="form-check-label" for="ckChaton">Chaton</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="ckFelin" name="interets" class="form-check-input" type="checkbox" value="felin" />
+                            <label class="form-check-label" for="ckFelin">Autres félins</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="ckChien" name="interets" class="form-check-input" type="checkbox" value="chien" />
+                            <label class="form-check-label" for="ckChien">Chien</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <p>
+                <input class="btn btn-primary btn-block" type="submit" value="Envoyer" />
+                <input class="btn btn-secondary btn-block" type="reset" value="Remise à zéro" />
+            </p>
+        </form>
+
+    </main>
+
+    <footer class="container-fluid d-none d-md-block ">
+        <p>
+            Site réalisé par Thomas pendant la formation Webmaster de
+            <a href="http://dawan.fr/" target="_blank">
+                <img src="img/institutionnel-logo.png" width="100" />
+            </a>
+        </p>
+
+    </footer>
+</body>
+
+</html>
